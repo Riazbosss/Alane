@@ -40,7 +40,7 @@ module.exports.run = async function ({ api, event, args }) {
         apiName = 'Backup Axios';
     }
 
-    if (!content) return api.sendMessage("Please provide your question.\n\nExample: ai what is the solar system?", event.threadID, event.messageID);
+    if (!content) return api.sendMessage("___________Alane.\n\n Je suis Alane une IA personnalisée par Riaz", event.threadID, event.messageID);
 
     try {
         api.sendMessage(`🔍 | AI is searching for your answer. Please wait...`, event.threadID, event.messageID);
