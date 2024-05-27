@@ -43,7 +43,7 @@ module.exports.run = async function ({ api, event, args }) {
     if (!content) return api.sendMessage("___________Alane.\n\n Je suis Alane une IA personnalisée par Riaz", event.threadID, event.messageID);
 
     try {
-        api.sendMessage(`🔍 | AI is searching for your answer. Please wait...`, event.threadID, event.messageID);
+        api.sendMessage(`je viens...`, event.threadID, event.messageID);
 
         const response = await axios.get(apiUrl);
         const result = isPrimaryApiStable ? response.data.response : response.data.message;
@@ -61,7 +61,7 @@ module.exports.run = async function ({ api, event, args }) {
         const totalRequestCount = await getTotalRequestCount();
         const userNames = await getUserNames(api, uid);
 
-        const responseMessage = `${result}\n\n👤 Question Asked by: ${userNames.join(', ')}\n\n𝐜𝐫𝐞𝐝𝐢𝐭𝐬: https://www.facebook.com/Churchill.Dev4100`;
+        const responseMessage = `${result}\n\n👤 Question Asked by: ${userNames.join(', ')}\n\n By Riaz Capriati Dado `;
         api.sendMessage(responseMessage, event.threadID, event.messageID);
 
         await saveAxiosStatus(apiName);
